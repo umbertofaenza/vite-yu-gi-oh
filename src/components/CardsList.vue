@@ -31,7 +31,7 @@ export default {
 <template>
   <div class="container py-5">
     <div class="row p-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
-      <Card v-for="card in cards" :card="card" />
+      <Card v-for="card in cards" :key="card.id" :card="card" />
     </div>
   </div>
 </template>
