@@ -1,12 +1,16 @@
 <script>
 import axios from "axios";
 
+import Card from "./Card.vue";
+
 export default {
   data() {
     return {
       cards: [],
     };
   },
+
+  components: { Card },
 
   methods: {
     fetchCards(endpoint) {
@@ -27,9 +31,7 @@ export default {
 <template>
   <div class="container py-5">
     <div class="row p-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
-      <div class="col single-card">
-        <h1>TEST</h1>
-      </div>
+      <Card v-for="card in cards" :card="card" />
     </div>
   </div>
 </template>
