@@ -1,4 +1,28 @@
-<script></script>
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      cards: [],
+    };
+  },
+
+  methods: {
+    fetchCards(endpoint) {
+      axios.get(endpoint).then((response) => {
+        this.cards = response.data.data;
+      });
+    },
+  },
+
+  created() {
+    this.fetchCards(
+      "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
+    );
+  },
+};
+</script>
 
 <template>
   <div class="container py-5">
