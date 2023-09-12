@@ -8,9 +8,7 @@ export default {
 
 <template>
   <main>
-    <div class="container">
-      <CardsList />
-    </div>
+    <CardsList />
   </main>
 </template>
 
