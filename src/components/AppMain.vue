@@ -1,7 +1,22 @@
-<script></script>
+<script>
+import CardsList from "./CardsList.vue";
+
+export default {
+  components: { CardsList },
+};
+</script>
 
 <template>
-  <h2>App Main</h2>
+  <main>
+    <div class="container">
+      <CardsList />
+    </div>
+  </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+  height: 100vh;
+  background-color: #d48f38;
+}
+</style>
