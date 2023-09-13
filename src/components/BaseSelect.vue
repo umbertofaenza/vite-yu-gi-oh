@@ -1,13 +1,23 @@
-<script></script>
+<script>
+import { store } from "../data/store";
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
+</script>
 
 <template>
   <div class="container pt-4">
     <h4>Filter by archetype:</h4>
     <select class="form-select w-25">
       <option selected>Select an archetype...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option v-for="archetype in store.archetypes" value="1">
+        {{ archetype.archetype_name }}
+      </option>
     </select>
   </div>
 </template>
