@@ -18,12 +18,20 @@ export default {
         store.cards = response.data.data;
       });
     },
+
+    fetchArchetypes(endpoint) {
+      axios.get(endpoint).then((response) => {
+        store.archetypes = response.data;
+      });
+    },
   },
 
   created() {
     this.fetchCards(
       "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
     );
+
+    this.fetchArchetypes("https://db.ygoprodeck.com/api/v7/archetypes.php");
   },
   components: { AppHeader, AppMain },
 };

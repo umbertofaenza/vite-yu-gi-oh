@@ -1,13 +1,15 @@
 <script>
 import CardsList from "./CardsList.vue";
+import BaseSelect from "./BaseSelect.vue";
 
 export default {
-  components: { CardsList },
+  components: { CardsList, BaseSelect },
 };
 </script>
 
 <template>
   <main>
+    <BaseSelect />
     <CardsList />
   </main>
 </template>
