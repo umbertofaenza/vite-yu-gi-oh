@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="container pt-4">
+  <div class="container py-3">
     <h4>Filter by archetype:</h4>
     <select
       @change="$emit('option-change', selectedOption)"
