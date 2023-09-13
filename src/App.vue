@@ -27,8 +27,14 @@ export default {
     },
 
     filterByArchetype(value) {
-      const fullUrl = `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=${value}`;
-      this.fetchCards(fullUrl);
+      if (value != "all") {
+        const filteredUrl = `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=${value}`;
+        this.fetchCards(filteredUrl);
+      } else {
+        const baseUrl =
+          "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0";
+        this.fetchCards(baseUrl);
+      }
     },
   },
 

@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       store,
-      selectedOption: "default",
+      selectedOption: "all",
     };
   },
 
@@ -21,7 +21,7 @@ export default {
       v-model="selectedOption"
       class="form-select w-25"
     >
-      <option value="default">Select an archetype...</option>
+      <option value="all">All archetypes</option>
       <option
         v-for="archetype in store.archetypes"
         :value="archetype.archetype_name"
