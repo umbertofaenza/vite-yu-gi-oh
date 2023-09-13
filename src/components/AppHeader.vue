@@ -3,7 +3,7 @@
 <template>
   <header>
     <div class="container">
-      <img src="../../public/img/yugioh-logo.png" alt="YuGiOh Logo" />
+      <img src="img/yugioh-logo.png" alt="YuGiOh Logo" />
       <h1>Yu-Gi-Oh API</h1>
     </div>
   </header>
